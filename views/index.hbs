@@ -1,15 +1,20 @@
 <html>
 <head>
 	<title>HN Hire Sort</title>
+	<link rel="stylesheet" href="/stylesheets/normalize.css">
 	<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
 	<h2>{{title}}</h2>
-	<ul>
-		<li>Item 1</li>
-		<li>Item 2</li>
-		<li>Item 3</li>
-		<li>Item 4</li>
+	<h3>Month: {{month}}</h3>
+	<h2>Job Listings</h2>
+	<ul class="listings">
+		{{#each listings}}
+			<li class="listing">
+				<h3>{{this.category}}</h3>
+				<p>{{this.description}}</p>
+			</li>
+		{{/each}}
 	</ul>
 </body>
 </html>

@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+.listings {
+	border: 1px solid #252728;
+	padding: 0;
+}
+
+.listings .listing {
+	list-style-type: none;
+	padding: 5%;
+}
+
+.listings .listing:nth-child(even){
+	background-color: #3EA5CE;
+}
+
+.listings .listing:nth-child(odd) {
+	background-color: #F4F4F4;
+}
