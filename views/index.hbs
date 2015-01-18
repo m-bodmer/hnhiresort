@@ -5,9 +5,12 @@
 	<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-	<h2>{{title}}</h2>
-	<h3>Month: {{month}}</h3>
-	<h2>Job Listings</h2>
+	<header class='main-header'>
+		<img src="/images/briefcase.png">
+		<h2>{{title}} / {{month}}</h2>
+	</header>
+	<div class='filter-bar'>
+	</div>
 	<ul class="listings">
 		{{#each listings}}
 			<li class="listing">

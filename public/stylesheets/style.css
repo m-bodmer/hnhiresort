@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,14 +6,45 @@ a {
   color: #00B7FF;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+}
+
+/* Header styling */
+.main-header {
+	background-color: #F5F5F5;
+	height: 92px;
+	line-height: 46px;
+	padding-left: 20px;
+}
+
+.main-header h2 {
+	display: inline-block;
+	color: #FF6801;
+	margin-left: 10px;
+}
+
+/* Filter bar */
+.filter-bar {
+	height: 65px;
+}
+
+/* Post Listings */
+
 .listings {
-	border: 1px solid #252728;
 	padding: 0;
 }
 
 .listings .listing {
+	border: 1px solid #252728;
 	list-style-type: none;
 	padding: 5%;
+	max-width: 660px;
+	margin: 0 auto;
 }
 
 .listings .listing:nth-child(even){
