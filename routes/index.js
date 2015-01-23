@@ -113,35 +113,35 @@ function getListings() {
 	// Grabbing each one as an item and building an object of comment listings
 
 	// ONLINE MODE
-	var submissions,
-		story;
+	// var submissions,
+	// 	story;
 
-	hn.user('whoishiring', function(err, user) {
-		if (!err) {
-			submissions = user.submitted;
-			findHiringStory(submissions, function(story) {
-				return buildListings(story);
-			});
-		}
-	});
+	// hn.user('whoishiring', function(err, user) {
+	// 	if (!err) {
+	// 		submissions = user.submitted;
+	// 		findHiringStory(submissions, function(story) {
+	// 			return buildListings(story);
+	// 		});
+	// 	}
+	// });
 	// END ONLINE MODE
 
 	// OFFLINE MODE BELOW
-	// var listings = [{
-	// 	category: "Buffer (http://bufferapp.com) - from wherever you want to be in the world (fully remote), we're looking for a Product Designer",
-	// 	description: "Over 30,000 people pay for a Buffer subscription to help them with their social media efforts, which helps us generate $420k MRR. With that we spend about $223k/mo on salaries, which is about 66% of our total spending (https://open.bufferapp.com/transparent-pricing-buffer/). We work without managers and are fully self-managing. You pick your own projects, recruit team members from within the company or join task forces that you find interesting ( https://open.bufferapp.com/decision-maker-no-managers-experi...) Like with everything else, our hiring process is fully transparent (more here https://open.bufferapp.com/how-we-hire/ )"
-	// }, {
-	// 	category: 'JavaScript',
-	// 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-	// }, {
-	// 	category: 'Python',
-	// 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-	// }, {
-	// 	category: 'Go',
-	// 	description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-	// }, ]
+	var listings = [{
+		category: "Buffer (http://bufferapp.com) - from wherever you want to be in the world (fully remote), we're looking for a Product Designer",
+		description: "Over 30,000 people pay for a Buffer subscription to help them with their social media efforts, which helps us generate $420k MRR. With that we spend about $223k/mo on salaries, which is about 66% of our total spending (https://open.bufferapp.com/transparent-pricing-buffer/). We work without managers and are fully self-managing. You pick your own projects, recruit team members from within the company or join task forces that you find interesting ( https://open.bufferapp.com/decision-maker-no-managers-experi...) Like with everything else, our hiring process is fully transparent (more here https://open.bufferapp.com/how-we-hire/ )"
+	}, {
+		category: 'Counterparty - REMOTE - http://counterparty.io',
+		description: "Counterparty is a freely licensed and open-source platform for peer-to-peer finance that lives on the Bitcoin blockchain. The network has been live since January, and it has seen over 130k transactions since then.[1] Overstock.com recently announced that it would be building the world's first SEC-regulated stock market for cryptosecurities on our platform.[2]"
+	}, {
+		category: 'Python',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	}, {
+		category: 'Go',
+		description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+	}, ]
 
-	// return listings;
+	return listings;
 	// END OFFLINE MODE
 }
 

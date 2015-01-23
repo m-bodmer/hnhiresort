@@ -2,8 +2,31 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/* Fonts */
+/* Apercu Light */
+@font-face {
+	font-family: "Apercu Light";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Apercu Light"), 
+				url("ap-light.woff") format("woff"),
+				url("ap-light.ttf") format("truetype");
+}
+
+/* Apercu Bold */
+@font-face {
+	font-family: "Apercu Bold";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Apercu Bold"), 
+				url("ap-bold.woff") format("woff"),
+				url("ap-bold.ttf") format("truetype");
+}
+
+/* Common elements */
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: ;
 }
 
 * {
@@ -12,25 +35,82 @@ a {
 
 ul {
 	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+/* Layout */
+.main-container {
+	margin: 0 auto;
+	max-width: 660px;
 }
 
 /* Header styling */
 .main-header {
 	background-color: #F5F5F5;
 	height: 92px;
-	line-height: 46px;
-	padding-left: 20px;
+	padding: 0 8%;
+}
+
+.main-header .main-container {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.header-text {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+}
+
+.main-header img {
+	float: left;
+	height: 22px;
+	width: 23px;
 }
 
 .main-header h2 {
-	display: inline-block;
 	color: #FF6801;
-	margin-left: 10px;
+	margin: 0 0 0 35px;
+	font-size: 17px;
+	font-family: "Apercu Bold";
+	line-height: 25px;
 }
 
 /* Filter bar */
 .filter-bar {
-	height: 65px;
+	height: 85px;
+	display: table;
+	width: 100%;
+}
+
+.filter-bar ul {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.filter-bar ul li {
+	color: #999999;
+	display: inline-block;
+	font-family: "Apercu Light";
+	font-size: 17px;
+}
+
+.filter-bar ul li a {
+	color: #999999;
+}
+
+.filter-bar ul li:not(:last-child) {
+	margin-right: 10px;
+}
+
+.sub-filter-bar {
+	display: none;
 }
 
 /* Post Listings */
@@ -40,11 +120,23 @@ ul {
 }
 
 .listings .listing {
-	border: 1px solid #252728;
-	list-style-type: none;
 	padding: 5%;
 	max-width: 660px;
 	margin: 0 auto;
+}
+
+.listings .listing p {
+	font-family: "Apercu Light";
+	font-size: 15px;
+}
+
+.listings .listing h3 {
+	font-family: "Apercu Bold";
+	font-size: 17px;
+}
+
+.listings .listing ul li {
+	display: inline-block;
 }
 
 .listings .listing:nth-child(even){
