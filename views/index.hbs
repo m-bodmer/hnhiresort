@@ -17,9 +17,9 @@
 		{{!-- Main Filter Bar --}}
 		<div class='filter-bar'>
 			<ul>
-				<li><a href="#">All locations </a><span>^</span></li>
-				<li>All jobs <span>^</span></li>
-				<li>All types <span>^</span></li>
+				<li><a href="">All locations<span>&or;</span></a></li>
+				<li><a href="">All jobs<span>&or;</span></a></li>
+				<li><a href="">All types<span>&or;</span></a></li>
 			</ul>
 			<hr>
 		</div>
@@ -37,13 +37,17 @@
 					<h3>{{{this.category}}}</h3>
 					<p>{{{this.description}}}</p>
 					<ul>
+						{{!-- TODO: Show link to posts --}}
 						<li><p>4 HN comments</p></li>
 						<li>|</li>
+						{{!-- TODO: Get date of post --}}
 						<li><p>Posted 7 days ago</p></li>
 					</ul>
 				</li>
 			{{/each}}
 		</ul>
 	</div>
+
+	<script type="text/javascript" src="/javascripts/main.js"></script>
 </body>
 </html>
