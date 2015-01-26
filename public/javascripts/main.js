@@ -1,5 +1,22 @@
-window.onload = function(){
-	console.log('DOM Loaded');
+function bindClose(link) {
+	// TODO: Close filter bar functionality
+}
 
-	// TODO: Bind click handler to filter bar to show sub filters
+function bindOpen(link) {
+	var filterLink = document.getElementById(link + '-filter');
+
+	debugger;
+	filterLink.onclick = function (evt) {
+		evt.preventDefault();
+
+		var filter = document.getElementById('sub-filter-' + link);
+		filter.style.display = "inline";
+
+		bindClose(link);
+	}
+}
+
+window.onload = function(){
+	bindOpen('location');
+	bindOpen('job');
 }

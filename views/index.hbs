@@ -17,18 +17,25 @@
 		{{!-- Main Filter Bar --}}
 		<div class='filter-bar'>
 			<ul>
-				<li><a href="">All locations<span>&or;</span></a></li>
-				<li><a href="">All jobs<span>&or;</span></a></li>
+				<li><a id='location-filter' href="">All locations<span>&or;</span></a></li>
+				<li><a id='job-filter' href="">All jobs<span>&or;</span></a></li>
 				<li><a href="">All types<span>&or;</span></a></li>
 			</ul>
 			<hr>
 		</div>
-		{{!-- Sub filter bar --}}
-		<div class='sub-filter-bar'>
+		{{!-- Sub filter bars --}}
+		<div id='sub-filter-location' class='sub-filter-bar'>
 			<ul>
-				<li></li>
-				<li>All jobs <span>^</span></li>
-				<li>All types <span>^</span></li>
+				<li>San Francisco</li>
+				<li>Toronto</li>
+				<li>New York City</li>
+			</ul>
+		</div>
+		<div id='sub-filter-job' class='sub-filter-bar'>
+			<ul>
+				<li>Full stack engineer</li>
+				<li>Front end engineer</li>
+				<li>Back end engineer</li>
 			</ul>
 		</div>
 		<ul class="listings">
