@@ -1,22 +1,34 @@
-function bindClose(link) {
-	// TODO: Close filter bar functionality
+function bindClose($filter, $subfilter) {
+	$filter.onclick = function (evt) {
+		evt.preventDefault();
+
+		$subfilter.style.display = "none";
+
+		bindSubfilterMenus();
+	}
 }
 
 function bindOpen(link) {
-	var filterLink = document.getElementById(link + '-filter');
+	var $filter = document.getElementById(link + '-filter');
 
-	debugger;
-	filterLink.onclick = function (evt) {
+	$filter.onclick = function (evt) {
 		evt.preventDefault();
 
-		var filter = document.getElementById('sub-filter-' + link);
-		filter.style.display = "inline";
+		var $subfilter = document.getElementById('sub-filter-' + link);
+		$subfilter.style.display = "inline";
 
-		bindClose(link);
+		bindClose($filter, $subfilter);
+	}
+}
+
+function bindSubfilterMenus() {
+	var filters = ['location', 'job', 'type'];
+
+	for (var i = 0, len = filters.length; i < len; i++) {
+		bindOpen(filters[i]);
 	}
 }
 
 window.onload = function(){
-	bindOpen('location');
-	bindOpen('job');
+	bindSubfilterMenus();
 }
