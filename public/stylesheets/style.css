@@ -26,7 +26,6 @@ body {
 /* Common elements */
 a {
   text-decoration: none;
-  color: ;
 }
 
 * {
@@ -113,9 +112,24 @@ ul li {
 	margin-right: 35px;
 }
 
+.filter-bar ul li .show {
+	display: none;
+}
+
+.filter-bar ul li a.active span {
+	display: none;
+}
+
+.filter-bar ul li a.active .show {
+	display: inline;
+}
+
+/* Sub filter bar */
 .sub-filter-bar {
 	display: none;
 }
+
+
 
 /* Post Listings */
 

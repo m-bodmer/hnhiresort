@@ -17,26 +17,34 @@
 		{{!-- Main Filter Bar --}}
 		<div class='filter-bar'>
 			<ul>
-				<li><a id='location-filter' href="">All locations<span>&or;</span></a></li>
-				<li><a id='job-filter' href="">All jobs<span>&or;</span></a></li>
-				<li><a id='type-filter' href="">All types<span>&or;</span></a></li>
+				<li><a id='location-filter'>All locations<span>&or;</span><span class='show'>^</span></a></li>
+				<li><a id='job-filter'>All jobs<span>&or;</span><span class='show'>^</span></a></li>
+				<li><a id='type-filter'>All types<span>&or;</span><span class='show'>^</span></a></li>
 			</ul>
 		</div>
 		{{!-- Sub filter bars --}}
-		<div id='sub-filter-location' class='sub-filter-bar'>
+		<div id='sub-filter-location' class='filter-bar sub-filter-bar'>
 			<ul>
 				<li>San Francisco</li>
 				<li>Toronto</li>
 				<li>New York City</li>
 			</ul>
 		</div>
-		<div id='sub-filter-job' class='sub-filter-bar'>
+		<div id='sub-filter-job' class='filter-bar sub-filter-bar'>
 			<ul>
 				<li>Full stack engineer</li>
 				<li>Front end engineer</li>
 				<li>Back end engineer</li>
 			</ul>
 		</div>
+		<div id='sub-filter-type' class='filter-bar sub-filter-bar'>
+			<ul>
+				<li>Fulltime</li>
+				<li>Contract</li>
+				<li>Remote</li>
+			</ul>
+		</div>
+		{{!-- Job listings --}}
 		<ul class="listings">
 			{{#each listings}}
 				<li class="listing">
