@@ -127,6 +127,8 @@ ul li {
 /* Sub filter bar */
 .sub-filter-bar {
 	display: none;
+	height: 40px;
+	padding-bottom: 38px;
 }
 
 
@@ -162,12 +164,4 @@ ul li {
 
 .listings .listing ul li p {
 	font-size: 13px;
-}
-
-.listings .listing:nth-child(even){
-	background-color: #3EA5CE;
-}
-
-.listings .listing:nth-child(odd) {
-	background-color: #F4F4F4;
 }

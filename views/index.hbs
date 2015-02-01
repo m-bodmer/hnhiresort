@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>HN Hire Sort</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="/stylesheets/normalize.css">
 	<link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -17,9 +18,9 @@
 		{{!-- Main Filter Bar --}}
 		<div class='filter-bar'>
 			<ul>
-				<li><a id='location-filter'>All locations<span>&or;</span><span class='show'>^</span></a></li>
-				<li><a id='job-filter'>All jobs<span>&or;</span><span class='show'>^</span></a></li>
-				<li><a id='type-filter'>All types<span>&or;</span><span class='show'>^</span></a></li>
+				<li><a id='location-filter'>All locations<span>&or;</span><span class='show'>&and;</span></a></li>
+				<li><a id='job-filter'>All jobs<span>&or;</span><span class='show'>&and;</span></a></li>
+				<li><a id='type-filter'>All types<span>&or;</span><span class='show'>&and;</span></a></li>
 			</ul>
 		</div>
 		{{!-- Sub filter bars --}}
