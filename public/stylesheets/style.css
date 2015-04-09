@@ -165,3 +165,8 @@ ul li {
 .listings .listing ul li p {
 	font-size: 13px;
 }
+
+footer {
+	font-family: "Apercu Light";
+	padding: 0 0 0 5%;
+}
